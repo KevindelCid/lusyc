@@ -1,11 +1,23 @@
 import React from "react";
+import functions from "../assets/js/reproductor";
 
 function Card(props) {
   return (
     <>
-      <div class="card dib">
+      <div
+        class="card dib"
+        onClick={() => {
+          functions.playCard(props);
+        }}
+      >
         <div class="ima dib">
-          <img class="dib" src="https://picsum.photos/100/100" alt=""></img>
+          <img
+            class="dib"
+            src={props.img}
+            width="80px"
+            height="80px"
+            alt=""
+          ></img>
         </div>
 
         <div class="text dib">
