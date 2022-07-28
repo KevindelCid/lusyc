@@ -1,7 +1,19 @@
 import React from "react";
+import functions from "../assets/js/reproduccion";
+
+
+
 
 function Reproductor(props) {
-  return (
+
+
+  // let audio = new Audio(props.url)
+
+
+
+
+
+  return ( 
     <>
       {/* <div className="reproductor">
         <div className="datos dib">
@@ -32,10 +44,27 @@ function Reproductor(props) {
             <div className="enReproduccion">
               <div className="rows">
                 <div>
-                  <h4 className="">{props.name}</h4>
-                  <h5 className="">{props.cancion}</h5>
+                  <h4 className="nameA">{props.name}</h4>
+                  <h5 className="nameC">{props.cancion}</h5>
+                  
+                    
+
+
+
+                 <button className="btn btn-reproducir dib" onClick={()=>{ 
+                    console.log(functions.reproducir)
+                    functions.play(props.url)}
+                  
+                  }>▶︎</button>
+                  
+                 
+                  <button className="btn btn-reproducir dib" onClick={functions.pauseAudio}>||</button>
                 </div>
-                <div>▶︎</div>
+                <div>
+                  {/* <audio className="rep" src={props.url} controls="controls" type="audio/mp3" preload="preload"></audio> */}
+
+                 
+                </div>
                 <div className="progress-bar dib"></div>
               </div>
             </div>

@@ -1,111 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,900;1,600&display=swap');
 
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Montserrat', sans-serif;
-    background-image: url('https://images.unsplash.com/photo-1528645602411-bbeb0d69a6de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWMlMjByb2NrfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 150px;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1528645602411-bbeb0d69a6de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWMlMjByb2NrfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 150px;
 
-}
-
-
-
-
-.dib{
- display: inline-block;
 }
 
 
-header{
-    
-    padding: 1.5rem 0 0 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-nav{
-    width: 100%;
-    box-shadow: 0 10px 20px rgb(26, 26, 26);;
-    background-color: rgba(2, 19, 19, 0.966);
-    color: #ccc;
-    position: sticky;
 
-}
-.nav-logo{
-    width: 10%;
-    
-margin: auto;    padding: 1rem;
+
+.dib {
+  display: inline-block;
 }
 
-nav>ul{
+
+header {
+
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav {
+  width: 100%;
+  box-shadow: 0 10px 20px rgb(26, 26, 26);
+  ;
+  background-color: rgba(2, 19, 19, 0.966);
+  color: #ccc;
+  position: sticky;
+
+}
+
+.nav-logo {
+  width: 10%;
+
+  margin: auto;
+  padding: 1rem;
+}
+
+nav>ul {
   width: 89%;
   text-align: right;
   vertical-align: super;
-  
+
 }
-li{
+
+li {
   padding: .5rem;
   border: 2px solid transparent;
   color: white;
 }
-li:hover{
+
+li:hover {
   border-bottom: 2px solid darkcyan;
   cursor: pointer;
 
- 
+
   font-weight: bold;
 }
 
-ul{
-    width: 89%;
-    text-align: right;
-    vertical-align: super;
-    
-}
-li{
-    padding: .5rem;
-    border: 2px solid transparent;
-    color: white;
-}
-li:hover{
-    border-bottom: 2px solid darkcyan;
-    cursor: pointer;
+ul {
+  width: 89%;
+  text-align: right;
+  vertical-align: super;
 
-   
-    font-weight: bold;
 }
 
-.logo-contacto{
-
-    width: 80px;
-    border-radius: 50%;
-    position: relative;
-    margin-top: -50px;
-    margin-left: 150px;
+li {
+  padding: .5rem;
+  border: 2px solid transparent;
+  color: white;
 }
 
-.art-dest-container{
+li:hover {
+  border-bottom: 2px solid darkcyan;
+  cursor: pointer;
+
+
+  font-weight: bold;
+}
+
+.rep {
+  margin-top: -50px;
+}
+
+.logo-contacto {
+
+  width: 80px;
+  border-radius: 50%;
+  position: relative;
+  margin-top: -50px;
+  margin-left: 150px;
+}
+
+.art-dest-container {
   background-color: rgb(21, 22, 22);
   width: 100%;
 }
 
-.enReproduccion{
-  
-}
+.enReproduccion {}
 
-.container-artista-del-dia{
+.container-artista-del-dia {
 
-width: 100%;
-height: 300px;
+  width: 100%;
+  height: 300px;
 
-margin-top: 15px;
+  margin-top: 15px;
 
 
 
@@ -113,79 +123,86 @@ margin-top: 15px;
 
 }
 
-.img{
-    width: 300px;
-   margin: 0;
-    border-radius: 15px;
-    
-}
-.texto{
-   
-    width: 40%;
-    height: 100%;
-    vertical-align: top;
-    color: white;
-    margin-top: 15px;
-    margin-left: 10px;
-    padding-bottom:40px ;
-}
-.texto>h2{
-    font-size: 30px;
-}
-
-.canciones-destacadas{
-   right: 0;
-   position: absolute;
-   padding: 10px;
-    
-width: 35%;
-height: 300px; 
-
-overflow-y:scroll;
-
+.img {
+  width: 300px;
+  margin: 0;
+  border-radius: 15px;
 
 }
 
-.container-artista-del-dia>h2{
+.texto {
 
- 
-    color: white;
-}
-.t{
-    color: white;
-}
-.caja{
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    width: 18%;
-    height: 130px;
-    background-color: rgb(29, 29, 29);
-    border: 5px solid rgb(44, 44, 44);
-    padding: 10px;
-    margin-bottom: 5px;
-    margin-right: 15px;
-    
-   
-    border-radius: 25px 0px 25px 0;
-    text-align: center;
-
+  width: 40%;
+  height: 100%;
+  vertical-align: top;
+  color: white;
+  margin-top: 15px;
+  margin-left: 10px;
+  padding-bottom: 40px;
 }
 
-h3{
-    color: white;
-    font-size: 22px;
+.texto>h2 {
+  font-size: 30px;
+}
+
+.canciones-destacadas {
+  right: 0;
+  position: absolute;
+  padding: 10px;
+
+  width: 35%;
+  height: 300px;
+
+  overflow-y: scroll;
+
 
 }
-h3>span{
-    font-size: 30px;
+
+.container-artista-del-dia>h2 {
+
+
+  color: white;
 }
-p{
-    color: rgb(255, 255, 255); 
-    font-size: 18px;
-    padding: 15px;
+
+.t {
+  color: white;
 }
-a{
+
+.caja {
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  width: 18%;
+  height: 130px;
+  background-color: rgb(29, 29, 29);
+  border: 5px solid rgb(44, 44, 44);
+  padding: 10px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+
+
+  border-radius: 25px 0px 25px 0;
+  text-align: center;
+
+}
+
+h3 {
+  color: white;
+  font-size: 22px;
+
+}
+
+h3>span {
+  font-size: 30px;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  padding: 15px;
+}
+
+a {
   color: white;
   text-decoration: none;
   margin: auto;
@@ -193,266 +210,311 @@ a{
   font-weight: bold;
 
 }
-a:hover{
-    color: white;
-  
-}
-.container{
 
-    color: white;
-    
-margin: 15px;
+a:hover {
+  color: white;
 
 }
 
+.container {
+
+  color: white;
+
+  margin: 15px;
+
+}
 
 
-main{
-    
-    width: 69%;
-    height: 500px;
-    background-color:rgba(3, 29, 41, 0.932);
-    padding: 20px;
-    overflow-y: scroll;
-    margin-bottom: 160px;
+
+main {
+
+  width: 69%;
+  height: 500px;
+  background-color: rgba(3, 29, 41, 0.932);
+  padding: 20px;
+  overflow-y: scroll;
+  margin-bottom: 160px;
 
 
 }
-aside  {
 
-    width: 30%;
-    height: 500px;
-    background-color: rgba(3, 29, 41, 0.932);
-    padding: 15px;
-    position: absolute;
-    margin-left: 5px;
-    margin-bottom: 160px;
+aside {
+
+  width: 30%;
+  height: 500px;
+  background-color: rgba(3, 29, 41, 0.932);
+  padding: 15px;
+  position: absolute;
+  margin-left: 5px;
+  margin-bottom: 160px;
 }
 
-li>img{
-    width: 50px;
-    border-radius: 50%;
-    
-}
-li.canciones{
-    text-align: left;
-width: 100%;
-cursor:pointer;
-}
-li>span{
-    margin-left: 15px;
-    font-size: 20px;
-}
-.card{
+li>img {
+  width: 50px;
+  border-radius: 50%;
 
-    width: 32%;
-    height: 100px;
-    background-color: rgb(21, 22, 22);
-    border-radius: 10px;
-    margin-right: 1%;
-    cursor:pointer;
-    
-   
 }
-.container-cards{
-padding: 15px;
 
+li.canciones {
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+li>span {
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.card {
+
+  width: 32%;
+  height: 100px;
+  background-color: rgb(21, 22, 22);
+  border-radius: 10px;
+  margin-right: 1%;
+  cursor: pointer;
 
 
 }
-.card:hover{
+
+.container-cards {
+  padding: 15px;
+
+
+
+}
+
+.card:hover {
   background-color: rgb(30, 30, 31);
 }
 
-.card>img{
-    vertical-align: top;  
-    position: absolute;
-    border-radius: 10px ;
-    
+.card>img {
+  vertical-align: top;
+  position: absolute;
+  border-radius: 10px;
+
 }
 
-.text{
-    vertical-align: top;
-    margin-top: 15px;
-    margin-left: 10px;
+.text {
+  vertical-align: top;
+  margin-top: 15px;
+  margin-left: 10px;
 }
 
-   .reproductor{
+.reproductor {
 
-    bottom: 0;
-    width: 100%;
-    height: 120px;
-    background-color: rgb(30, 31, 31);
-    color: white;
-    position: fixed;
-
-
-
-
-     
-
-   }
-  .celdaInfo{
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  .rows{
-    display: grid;
-    grid-template-rows: 95px auto;
-  }
-   .reproductor>.play{
-
-    width: 69%;
-    font-size: 60px;
-    height: 80%;
-    color: white;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(30, 31, 31);
+  color: white;
+  position: fixed;
 
 
 
-   }
-   .reproductor>.datos{
-    width: 30%;
-    height: 70%;
-    color: white;
-    display: grid;
-   }
-   .reproductor>.duration{
-    width: 80%;
-    color: white;   
-   margin-top: -10px;
-    text-align: right;
-   }
-   .reproductor>.progress-bar{
-    text-align: center;
-    width: 96%;
-    height: 5px;
-    background-color: rgb(74, 78, 78);
-    top: 0;
-    cursor:pointer;
-   }
-   .duration>.start{
-    left: 0;
-   }
-   .duration>.now{
-    text-align: center;
-   }
-   .duration>.end{
-    text-align: right;
-   }
-   .navburger{
-    display: none;
-   }
 
-.texto>button{
+
+
+}
+
+.celdaInfo {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.rows {
+  display: grid;
+  grid-template-rows: 95px auto;
+}
+
+.reproductor>.play {
+
+  width: 69%;
+  font-size: 60px;
+  height: 80%;
+  color: white;
+
+
+
+}
+
+.reproductor>.datos {
+  width: 30%;
+  height: 70%;
+  color: white;
+  display: grid;
+}
+
+.reproductor>.duration {
+  width: 80%;
+  color: white;
+  margin-top: -10px;
+  text-align: right;
+}
+
+.reproductor>.progress-bar {
+  text-align: center;
+  width: 96%;
+  height: 5px;
+  background-color: rgb(74, 78, 78);
+  top: 0;
+  cursor: pointer;
+}
+
+.duration>.start {
+  left: 0;
+}
+
+.duration>.now {
+  text-align: center;
+}
+
+.duration>.end {
+  text-align: right;
+}
+
+.navburger {
+  display: none;
+}
+
+.texto>button {
   color: white;
   background-color: rgba(240, 248, 255, 0);
   cursor: pointer;
 }
-.texto>button:hover{
+
+.texto>button:hover {
   text-decoration: underline;
 }
 
-   @media only screen and (max-width: 969px) {
-    body{
-      text-align: center;
-     }
-     nav{
-      text-align: left;
-     }
-    
-    .canciones-destacadas{
-      right: 0;
-      position: relative;
-      padding: 10px;
-       margin-top: -4px;
-   width: 100%;
-   height: 300px; 
-   background-color: rgb(21, 22, 22);
-   overflow-y:scroll;
-   
-   
-   }
+@media only screen and (max-width: 969px) {
+  body {
+    text-align: center;
   }
 
-  @media only screen and (max-width: 800px) {
-    
-   .card{
+  nav {
+    text-align: left;
+  }
+
+  .canciones-destacadas {
+    right: 0;
+    position: relative;
+    padding: 10px;
+    margin-top: -4px;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(21, 22, 22);
+    overflow-y: scroll;
+
+
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .card {
     height: 200px;
     margin-bottom: 10px;
-   }
-   .ima{
+  }
+
+  .ima {
     width: 100%;
-   }
-   .container-cards {
+  }
+
+  .container-cards {
     padding: 15px;
     width: 100%;
     margin-bottom: 10px;
-}
-.container{
-  margin: 0;
-
-}
   }
 
-  @media only screen and (max-width: 577px) {
-   
-   
-    .texto{
-   
-      width: 100%;
-     
-      
-      color: white;
-      margin-top: -5px;
-      background-color: rgb(21, 22, 22);
-      margin-left: 0px;
+  .container {
+    margin: 0;
+
+  }
+}
+
+@media only screen and (max-width: 577px) {
+
+
+  .texto {
+
+    width: 100%;
+
+
+    color: white;
+    margin-top: -5px;
+    background-color: rgb(21, 22, 22);
+    margin-left: 0px;
 
 
   }
-  .img{
+
+  .img {
     width: 300px;
-   
+
     border-radius: 15px;
     text-align: center;
-    
-}
-.imgcontainer{
-  width: 100%;
-   text-align: center;
+
+  }
+
+  .imgcontainer {
+    width: 100%;
+    text-align: center;
+
+  }
 
 }
-   
+
+@media only screen and (max-width: 499px) {
+  .navburger {
+    display: inline;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+
+    height: 100%;
+    font-weight: bold;
+
   }
+
+  .nav-logo {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  nav>.ulnav {
+    display: none;
+
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+  }
+
+  body {
+    margin-top: 55px;
+  }
+
+}
+
+.btn-reproducir {
   
-  @media only screen and (max-width: 499px) {
-    .navburger{
-      display: inline;
-      position: absolute;
-      right: 0;
-      margin-right: 15px;
-      font-size: 22px;
-      cursor: pointer;
-      
-height: 100%;   
-font-weight: bold;
-   
-     }
-     .nav-logo{
-      width: 100%;
-      text-align: center;
-      padding: 1rem;
-  }
-  
-    nav>.ulnav{
-     display: none;
-      
-    }
-    nav{
-      position: fixed;
-      top: 0;
-    }
-    body{
-      margin-top: 55px;
-    }
-   
-  }
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  margin-top: 10px;
+
+
+}
+
+.row>.nameA{
+
+  margin-bottom: 15px;
+
+}

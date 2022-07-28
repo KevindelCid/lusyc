@@ -1,9 +1,15 @@
 import React from "react";
+import functions from "../assets/js/reproduccion";
 
 function Card(props) {
+
+
+
+
   return (
     <>
-      <div class="card dib">
+      <div class="card dib" onClick={
+      () => functions.start(props.url) }>
         <div class="ima dib">
           <img class="dib" src="https://picsum.photos/100/100" alt=""></img>
         </div>
