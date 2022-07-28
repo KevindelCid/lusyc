@@ -72,12 +72,7 @@ function App() {
       url: "https://luzmaya.com/storage/lusyc/musica/amarte_aun_mas.mp3",
       img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
     },
-    {
-      name: "El David",
-      nombrecancion: "Vino tinto",
-      url: "file:///C:/Users/CURACAO/Downloads/02%20-%20Dani%20del%20Cid%20-%20El%20Gu%C3%ADa%20Ciego%20-%20Dani%20del%20Cid%20(1).mp3",
-      img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
-    },
+    
   ];
 
   const componentsCards = cancionesRecomendadas.map((item) => {
@@ -97,6 +92,7 @@ function App() {
       <ArtistaDestacado
        data={datosDestacado}
       />
+      <h2 className="canciones--recomendadas-txt">Canciones Recomendadas</h2>
       <div class="container container-cards"> {componentsCards}</div>
       <Reproductor name={cancionesRecomendadas[0].name} cancion={cancionesRecomendadas[0].nombrecancion} url={cancionesRecomendadas[0].url}/>
     </>

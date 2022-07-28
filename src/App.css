@@ -171,6 +171,9 @@ h3 {
 h3 > span {
   font-size: 30px;
 }
+.canciones--recomendadas-txt{
+  margin: 42px 0px 10px 0px;
+}
 p {
   color: rgb(255, 255, 255);
   font-size: 18px;
