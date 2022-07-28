@@ -1,8 +1,5 @@
 import React from "react";
-import functions from "../assets/js/reproduccion";
-
-
-
+import functions from "../assets/js/reproductor";
 
 function Reproductor(props) {
 
@@ -36,41 +33,34 @@ function Reproductor(props) {
         
       </div> */}
 
-      <div className="reproductor">
-        <div className="rows">
-          <div className="celdaInfo">
-            <img className="" src="https://picsum.photos/80/80" alt=""></img>
-
-            <div className="enReproduccion">
-              <div className="rows">
-                <div>
-                  <h4 className="nameA">{props.name}</h4>
-                  <h5 className="nameC">{props.cancion}</h5>
-                  
-                    
-
-
-
-                 <button className="btn btn-reproducir dib" onClick={()=>{ 
-                    console.log(functions.reproducir)
-                    functions.play(props.url)}
-                  
-                  }>▶︎</button>
-                  
-                 
-                  <button className="btn btn-reproducir dib" onClick={functions.pauseAudio}>||</button>
-                </div>
-                <div>
-                  {/* <audio className="rep" src={props.url} controls="controls" type="audio/mp3" preload="preload"></audio> */}
-
-                 
-                </div>
-                <div className="progress-bar dib"></div>
-              </div>
-            </div>
-          </div>
+      <div className="player-fix">
+        <img
+          id="imgPlayer"
+          className=""
+          src="https://picsum.photos/80/80"
+          alt=""
+          width="80px"
+          height="80px"
+        ></img>
+        <div className="datos-reproduccion">
+          <h4 id="playerName" className="">
+            {props.name}
+          </h4>
+          <h5 id="songName" className="">
+            {props.cancion}
+          </h5>
         </div>
+
+        <button
+          id="btn-rep"
+          className="btn-reproducir "
+          onClick={functions.play}
+        >
+          ▶︎
+        </button>
       </div>
+
+      <div className="progress-bar dib"></div>
     </>
   );
 }

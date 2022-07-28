@@ -1,21 +1,23 @@
 import React from "react";
+import functionsUi from "../assets/js/ui";
 
 function Navbar(props) {
   return (
     <>
       <nav>
-        <div className="dib nav-logo">
-          <h1 className="dib">LUSYC</h1>
-          <div className=" dib navburger">☰</div>
-        </div>
+        <div className="navigator-flex">
+          <h1 className="">LUSYC</h1>
+          <div className="  navburger options" onClick={functionsUi.hamMenu}>
+            <span id="navburger">☰</span>
+          </div>
 
-        <ul className="dib ulnav">
-          <li className="dib">cosa 1</li>
-          <li className="dib">cosa 2</li>
-          <li className="dib">cosa 3</li>
-          <li className="dib">cosa 4</li>
-          <li className="dib">cosa 5</li>
-        </ul>
+          <ul id="options" className="options-navigation">
+            <li className="">Home</li>
+            <li className="">Playlists</li>
+            <li className="">Localities</li>
+            <li className="">Login</li>
+          </ul>
+        </div>
       </nav>
     </>
   );
