@@ -60,7 +60,7 @@ function App() {
     <>
       <Navbar name="LUSYC" />
       <ArtistaDestacado
-        name="Sopon Avenue"
+        name="Daniel del Cid"
         bio="Un canta-autor Coatepecano cuyas composiciones llegan al alma"
       />
       <div class="container container-cards"> {componentsCards}</div>
