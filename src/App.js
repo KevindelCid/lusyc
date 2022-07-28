@@ -11,22 +11,37 @@ function App() {
 
 
 
-
-
-  const fuentes = [
-<<<<<<< HEAD
-    { name: "Dani del Cid", nombrecancion: "Sin ella", url:"https://dkihjuum4jcjr.cloudfront.net/ES_ITUNES/Avinam/ES_Avinam.mp3" },
-    { name: "Fredy Sopon", nombrecancion: "Rosa", url:"https://dkihjuum4jcjr.cloudfront.net/ES_ITUNES/Fairy%20Lights/ES_Fairy%20Lights.mp3"},
-    { name: "El David", nombrecancion: "Vino tinto", url:""},
-    { name: "Dani del Cid", nombrecancion: "Sin ella", url:""},
-    { name: "Fredy Sopon", nombrecancion: "Rosa", url:""},
-    { name: "El David", nombrecancion: "Vino tinto", url:""},
+  const datosDestacado = [
+   [{
+    name: 'Daniel del Cid',
+    datos: 'Cantautor Originario de Coatepeque, Quetzaltenango, Guatemala. *Todas las canciones se encuentran en etapa de demo*',
+    perfil: '#',
+    img: 'https://luzmaya.com/storage/lusyc/imagenes/artistas/daniel_del_cid.jpg'
+   }],
+   {
+    name: "Dani del Cid",
+    nombrecancion: "El guía ciego",
+    url: "https://luzmaya.com/storage/lusyc/musica/el_guia_ciego.mp3",
+    img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
+   },
+   {
+    name: "Dani del Cid",
+    nombrecancion: "Amarte aún más",
+    url: "https://luzmaya.com/storage/lusyc/musica/amarte_aun_mas.mp3",
+    img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
+   },
+   {
+    name: "Dani del Cid",
+    nombrecancion: "Sin ella",
+    url: "https://luzmaya.com/storage/lusyc/musica/sin_ella.mp3",
+    img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
+   },
   ];
 
-  const componentsCards = fuentes.map((item) => {
-    return <Card name={item.name} url={item.url}
-     nombrecancion={item.nombrecancion} />;
-=======
+
+
+
+  const cancionesRecomendadas = [
     {
       name: "Dani del Cid",
       nombrecancion: "El guía ciego",
@@ -52,9 +67,9 @@ function App() {
       img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
     },
     {
-      name: "Fredy Sopon",
-      nombrecancion: "Rosa",
-      url: "file:///C:/Users/CURACAO/Downloads/02%20-%20Dani%20del%20Cid%20-%20El%20Gu%C3%ADa%20Ciego%20-%20Dani%20del%20Cid%20(1).mp3",
+      name: "Daniel del Cid",
+      nombrecancion: "Amarte aún más",
+      url: "https://luzmaya.com/storage/lusyc/musica/amarte_aun_mas.mp3",
       img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
     },
     {
@@ -65,7 +80,7 @@ function App() {
     },
   ];
 
-  const componentsCards = fuentes.map((item) => {
+  const componentsCards = cancionesRecomendadas.map((item) => {
     return (
       <Card
         name={item.name}
@@ -74,18 +89,16 @@ function App() {
         img={item.img}
       />
     );
->>>>>>> 12d640036c72ed505565e4cae485a5306349bde5
   });
  
   return (
     <>
       <Navbar name="LUSYC" />
       <ArtistaDestacado
-        name="Daniel del Cid"
-        bio="Un canta-autor Coatepecano cuyas composiciones llegan al alma"
+       data={datosDestacado}
       />
       <div class="container container-cards"> {componentsCards}</div>
-      <Reproductor name={fuentes[0].name} cancion={fuentes[0].nombrecancion} url={fuentes[0].url}/>
+      <Reproductor name={cancionesRecomendadas[0].name} cancion={cancionesRecomendadas[0].nombrecancion} url={cancionesRecomendadas[0].url}/>
     </>
   );
 }
