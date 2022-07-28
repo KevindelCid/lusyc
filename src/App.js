@@ -36,6 +36,7 @@ function App() {
     url: "https://luzmaya.com/storage/lusyc/musica/sin_ella.mp3",
     img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
    },
+
   ];
 
 

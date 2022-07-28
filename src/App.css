@@ -136,10 +136,13 @@ li:hover {
   padding: 10px;
 
   width: 35%;
-  height: 300px;
+  height: 340px;
 
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 1;
+
+  margin-top: 20px;
+  vertical-align: top;
 }
 
 .container-artista-del-dia > h2 {
@@ -173,6 +176,7 @@ h3 > span {
 }
 .canciones--recomendadas-txt{
   margin: 42px 0px 10px 0px;
+  
 }
 p {
   color: rgb(255, 255, 255);
@@ -363,6 +367,12 @@ li > span {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1239px) {
+  .canciones-destacadas{
+    vertical-align: 0;
+  }
+}
+
 @media only screen and (max-width: 969px) {
   body {
     text-align: center;
@@ -381,6 +391,8 @@ li > span {
     background-color: rgb(21, 22, 22);
     overflow-y: scroll;
     z-index: 1;
+
+    
   }
 }
 
@@ -400,6 +412,7 @@ li > span {
   .container {
     margin: 0;
   }
+
 }
 
 @media only screen and (max-width: 577px) {
@@ -422,6 +435,7 @@ li > span {
     width: 100%;
     text-align: center;
   }
+
 }
 
 @media only screen and (max-width: 499px) {
@@ -453,4 +467,5 @@ li > span {
   body {
     margin-top: 55px;
   }
+
 }
