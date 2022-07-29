@@ -47,6 +47,12 @@ function App() {
 
   const cancionesRecomendadas = [
     {
+      name: "Survivor",
+      nombrecancion: "Eye of the tiger",
+      url: "//manzdev.github.io/codevember2017/assets/eye-tiger.mp3",
+      img: "https://i1.sndcdn.com/artworks-qhIHG2qG9ELR6oB0-1IFvTQ-t500x500.jpg",
+    },
+    {
       name: "Dani del Cid",
       nombrecancion: "El guía ciego",
       url: "https://luzmaya.com/storage/lusyc/musica/el_guia_ciego.mp3",
@@ -98,7 +104,7 @@ function App() {
       />
       <h2 className="canciones--recomendadas-txt">Canciones Recomendadas</h2>
       <div class="container container-cards"> {componentsCards}</div>
-      <Reproductor name={cancionesRecomendadas[0].name} cancion={cancionesRecomendadas[0].nombrecancion} url={cancionesRecomendadas[0].url}/>
+      <Reproductor name={cancionesRecomendadas[0].name} cancion={cancionesRecomendadas[0].nombrecancion} url={cancionesRecomendadas[0].url} image={cancionesRecomendadas[0].img} />
     </>
   );
 }

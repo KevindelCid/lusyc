@@ -38,7 +38,7 @@ function Reproductor(props) {
         <img
           id="imgPlayer"
           className=""
-          src="https://picsum.photos/80/80"
+          src={props.image}
           alt=""
           width="80px"
           height="80px"
