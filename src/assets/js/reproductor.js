@@ -114,50 +114,10 @@ function seTerminoLaCancion(){
   }
   else{
 
-    const nextSong = [
-      {
-                name: "Dani del Cid",
-                nombrecancion: "El guía ciego",
-                url: "https://luzmaya.com/storage/lusyc/musica/el_guia_ciego.mp3",
-                img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
-              },
-              {
-                name: "Fredy Sopon",
-                nombrecancion: "Rosa",
-                url: "https://luzmaya.com/storage/lusyc/musica/rosa.mp3",
-                img: "https://luzmaya.com/storage/lusyc/imagenes/rename.jpg",
-              },
-              {
-                name: "Dani del Cid",
-                nombrecancion: "Sin ella",
-                url: "https://luzmaya.com/storage/lusyc/musica/sin_ella.mp3",
-                img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
-              },
-              {
-                name: "Dani del Cid",
-                nombrecancion: "Dime",
-                url: "https://luzmaya.com/storage/lusyc/musica/dime_pista.mp3",
-                img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
-              },
-              {
-                name: "Daniel del Cid",
-                nombrecancion: "Amarte aún más",
-                url: "https://luzmaya.com/storage/lusyc/musica/amarte_aun_mas.mp3",
-                img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
-              },
-      ]
-       
-        
-      
-
-let ran = Math.floor(Math.random() * nextSong.length)
-
-    audio.src= nextSong[ran].url
-    changeDataOfPlayer(nextSong[ran]);
-    audio.play()
-  }
+   next()
   
 
+}
 }
 
 
@@ -196,77 +156,73 @@ if (reproduciendo === false) {
 }
 
    
-// if(continuidadAudio === 'repeat') {
 
+
+
+ 
+}
+function next(){
+
+  const nextSong = [
+    {
+              name: "Dani del Cid",
+              nombrecancion: "El guía ciego",
+              url: "https://luzmaya.com/storage/lusyc/musica/el_guia_ciego.mp3",
+              img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
+            },
+            {
+              name: "Fredy Sopon",
+              nombrecancion: "Rosa",
+              url: "https://luzmaya.com/storage/lusyc/musica/rosa.mp3",
+              img: "https://luzmaya.com/storage/lusyc/imagenes/rename.jpg",
+            },
+            {
+              name: "Dani del Cid",
+              nombrecancion: "Sin ella",
+              url: "https://luzmaya.com/storage/lusyc/musica/sin_ella.mp3",
+              img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
+            },
+            {
+              name: "Dani del Cid",
+              nombrecancion: "Dime",
+              url: "https://luzmaya.com/storage/lusyc/musica/dime_pista.mp3",
+              img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
+            },
+            {
+              name: "Daniel del Cid",
+              nombrecancion: "Amarte aún más",
+              url: "https://luzmaya.com/storage/lusyc/musica/amarte_aun_mas.mp3",
+              img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
+            },
+    ]
+     
+      
+    
+
+let ran = Math.floor(Math.random() * nextSong.length)
+
+  audio.src= nextSong[ran].url
+  changeDataOfPlayer(nextSong[ran]);
+  audio.play()
+}
+
+
+function repeat(){
+
+
+  const repetir = document.getElementById('btnRepeat')
+  continuidadAudio === 'repeat'? continuidadAudio = 'next': continuidadAudio = 'repeat'
   
-// let btn = document.getElementById("btn-rep");
-// if (reproduciendo === false) {
-//  audio.pause()
-//   audio.controls = true;
+  if(continuidadAudio === 'repeat'){
+    
+    repetir.classList.remove('color-disabled');
+    repetir.classList += " color-enabled";
 
-//   audio.volume = 0.5;
+  } else{
+    repetir.classList.remove('color-enabled');
+    repetir.classList += " color-disabled";
 
- 
-
-//   audio.play()
-
-
-//   reproduciendo = true;
-//   btn.textContent = "||";
-// } else {
-//   audio.pause();
-//   reproduciendo = false;
-//   btn.textContent = "▶︎";
-// }
-
-// }
-// else if(continuidadAudio === 'next'){
-
-
-//   console.log('buscando nueva cancion para reproducir...')
-// //supongamos que esto vino del backend
-// // const nextSong = [
-// //   {
-// //     name: "Dani del Cid",
-// //     nombrecancion: "Sin ella",
-// //     url:  "//manzdev.github.io/codevember2017/assets/eye-tiger.mp3",
-// //     img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
-// //   },
-// //   {
-// //     name: "Fredy Sopon",
-// //     nombrecancion: "Rosa",
-// //     url:  "//manzdev.github.io/codevember2017/assets/eye-tiger.mp3",
-// //     img: "https://luzmaya.com/storage/lusyc/imagenes/rename.jpg",
-// //   },
-// //   {
-// //     name: "Dani del Cid",
-// //     nombrecancion: "Sin ella",
-// //     url:  "//manzdev.github.io/codevember2017/assets/eye-tiger.mp3",
-// //     img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
-// //   },
-// //   {
-// //     name: "Dani del Cid",
-// //     nombrecancion: "Dime",
-// //     url:  "//manzdev.github.io/codevember2017/assets/eye-tiger.mp3",
-// //     img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
-// //   },
-// //   {
-// //     name: "Daniel del Cid",
-// //     nombrecancion: "Amarte aún más",
-// //     url:  "//manzdev.github.io/codevember2017/assets/eye-tiger.mp3",
-// //     img: "https://luzmaya.com/storage/lusyc/imagenes/ElGuiaCiego.png",
-// //   },
-// // ]
-// audio.pause()
-// audio = new Audio("//manzdev.github.io/codevember2017/assets/eye-tiger.mp3")
-// audio.play()
-
-// }
-
-
-
-
- 
+  }
 }
 
 
@@ -323,6 +279,8 @@ const functions = {
   play,
   playCard,
   audio,
+  repeat,
+  next
 
 };
 

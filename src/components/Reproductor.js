@@ -52,13 +52,23 @@ function Reproductor(props) {
           </h5>
         </div>
 
-        <button
+<div className="contenedor-botones-reproductor">
+
+<button id="btnRepeat" className="btn-repeat color-disable"  onClick={functions.repeat}>↺</button>
+
+  
+   <button
           id="btn-rep"
           className="btn-reproducir "
           onClick={functions.play}
         >
           ▶︎
         </button>
+
+        <button id="btnNext" className="btn-next color-enabled"  onClick={functions.next}>»</button>
+  
+</div>
+       
       </div>
 
       <div className="progress-bar dib"></div>

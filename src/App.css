@@ -4,6 +4,7 @@
   --gray-black-card: rgb(26, 26, 26);
   --white-primary: rgb(235, 235, 235);
   --white-secundary: rgb(145, 145, 145);
+  --gray-secundary: rgb(75, 75, 75);
 }
 
 * {
@@ -88,7 +89,38 @@ li:hover {
 
   font-weight: bold;
 }
+.btn-repeat{
+ 
+  font-size: 28px;
+ 
+  color: var(--gray-secundary);
+  background-color: rgba(204, 204, 204, 0);
+  border: none;
+  font-weight: bold;
+  
+  vertical-align: middle;
+  cursor: pointer;
 
+  }
+  .btn-next{
+    font-size: 42px;
+  color: var(--white-primary);
+  background-color: rgba(204, 204, 204, 0);
+  border: none;
+
+  vertical-align: middle;
+  cursor: pointer;
+  }
+  .contenedor-botones-reproductor{
+    padding-right: 20px;
+  }
+  
+  .color-disable{
+    color: var(--gray-secundary);
+  }
+  .color-enabled{
+    color: var(--white-primary);
+  }
 .logo-contacto {
   width: 80px;
   border-radius: 50%;
@@ -236,6 +268,7 @@ li > span {
   background-color: rgb(21, 22, 22);
   border-radius: 10px;
   margin-right: 1%;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 .container-cards {
@@ -387,7 +420,7 @@ li > span {
     padding: 10px;
     margin-top: -4px;
     width: 100%;
-    height: 300px;
+    height: 315px;
     background-color: rgb(21, 22, 22);
     overflow-y: scroll;
     z-index: 1;
