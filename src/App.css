@@ -146,6 +146,9 @@ li:hover {
 
 .img {
   width: 300px;
+  height: 355px;
+  object-fit: contain;
+    border-radius: 15px;
   margin: 0;
   border-radius: 15px;
 }
@@ -459,8 +462,8 @@ li > span {
   }
   .img {
     width: 200px;
-
-    border-radius: 15px;
+    height: 356px;
+    
     text-align: center;
   }
 

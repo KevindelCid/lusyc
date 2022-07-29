@@ -70,6 +70,12 @@ function next(){
 
   const nextSong = [
     {
+      name: "Survivor",
+      nombrecancion: "Eye of the tiger",
+      url: "//manzdev.github.io/codevember2017/assets/eye-tiger.mp3",
+      img: "https://i1.sndcdn.com/artworks-qhIHG2qG9ELR6oB0-1IFvTQ-t500x500.jpg",
+    },
+    {
               name: "Dani del Cid",
               nombrecancion: "El guía ciego",
               url: "https://luzmaya.com/storage/lusyc/musica/el_guia_ciego.mp3",
