@@ -278,7 +278,6 @@ function changeDataOfPlayer(props) {
 const functions = {
   play,
   playCard,
-  audio,
   repeat,
   next
 
