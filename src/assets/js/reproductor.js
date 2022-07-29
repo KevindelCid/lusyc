@@ -150,9 +150,10 @@ function seTerminoLaCancion(){
         
       
 
+let ran = Math.floor(Math.random() * nextSong.length)
 
-
-    audio.src= nextSong[Math.floor(Math.random() * nextSong.length)].url
+    audio.src= nextSong[ran].url
+    changeDataOfPlayer(nextSong[ran]);
     audio.play()
   }
   
