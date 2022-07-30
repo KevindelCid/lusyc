@@ -2,16 +2,9 @@ import React from "react";
 import functions from "../assets/js/reproductor";
 
 function Reproductor(props) {
-
-
   // let audio = new Audio(props.url)
 
-
-
-
-
-
-  return ( 
+  return (
     <>
       {/* <div className="reproductor">
         <div className="datos dib">
