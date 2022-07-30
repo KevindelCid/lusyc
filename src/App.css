@@ -475,6 +475,11 @@ form {
   box-shadow: 0 10px 20px rgb(14, 14, 14);
 }
 
+.btn-login:hover {
+  background-color: var(--white-primary);
+  color: var(--green-primary);
+}
+
 @media only screen and (max-width: 1239px) {
   .canciones-destacadas {
     vertical-align: 0;
