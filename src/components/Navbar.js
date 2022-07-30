@@ -1,24 +1,53 @@
 import React from "react";
 import functionsUi from "../assets/js/ui";
+import { Link, Outlet, BrowserRouter, Route, Routes } from "react-router-dom";
 
+import Home from "./Home";
+import Login from "./Login";
+import Playlists from "./Playlists";
+import Localities from "./Localities";
 function Navbar(props) {
   return (
     <>
-      <nav>
-        <div className="navigator-flex">
-          <h1 className="">LUSYC</h1>
-          <div className="  navburger options" onClick={functionsUi.hamMenu}>
-            <span id="navburger">☰</span>
-          </div>
+      <BrowserRouter>
+        <nav>
+          <div className="navigator-flex">
+            <h1 className="">LUSYC</h1>
+            <div className="  navburger options" onClick={functionsUi.hamMenu}>
+              <span id="navburger">☰</span>
+            </div>
 
-          <ul id="options" className="options-navigation">
-            <li className="">Home</li>
-            <li className="">Playlists</li>
-            <li className="">Localities</li>
-            <li className="">Login</li>
-          </ul>
-        </div>
-      </nav>
+            <ul id="options" className="options-navigation">
+              <Link to="/" className="link">
+                Home
+              </Link>
+              <Link to="/playlists" className="link">
+                Playlists
+              </Link>
+              <Link to="/localities" className="link">
+                Localities
+              </Link>
+              <Link to="/login" className="link">
+                Login
+              </Link>
+              <Outlet />
+            </ul>
+          </div>
+        </nav>{" "}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/localities" element={<Localities />} />
+          <Route path="/playlists" element={<Playlists />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+
+      {/* <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter> */}
     </>
   );
 }

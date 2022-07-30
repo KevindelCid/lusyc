@@ -4,6 +4,7 @@
   --gray-black-card: rgb(26, 26, 26);
   --white-primary: rgb(235, 235, 235);
   --white-secundary: rgb(145, 145, 145);
+  --gray-secundary: rgb(75, 75, 75);
 }
 
 * {
@@ -65,6 +66,21 @@ li:hover {
   font-weight: bold;
 }
 
+.link {
+  padding: 0.5rem;
+  border: 2px solid transparent;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.link:hover {
+  border-bottom: 2px solid darkcyan;
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
 .navigator-flex {
   display: flex;
   padding: 1rem;
@@ -88,7 +104,36 @@ li:hover {
 
   font-weight: bold;
 }
+.btn-repeat {
+  font-size: 28px;
 
+  color: var(--gray-secundary);
+  background-color: rgba(204, 204, 204, 0);
+  border: none;
+  font-weight: bold;
+
+  vertical-align: middle;
+  cursor: pointer;
+}
+.btn-next {
+  font-size: 42px;
+  color: var(--white-primary);
+  background-color: rgba(204, 204, 204, 0);
+  border: none;
+
+  vertical-align: middle;
+  cursor: pointer;
+}
+.contenedor-botones-reproductor {
+  padding-right: 20px;
+}
+
+.color-disable {
+  color: var(--gray-secundary);
+}
+.color-enabled {
+  color: var(--white-primary);
+}
 .logo-contacto {
   width: 80px;
   border-radius: 50%;
@@ -114,6 +159,9 @@ li:hover {
 
 .img {
   width: 300px;
+  height: 355px;
+  object-fit: contain;
+  border-radius: 15px;
   margin: 0;
   border-radius: 15px;
 }
@@ -174,9 +222,8 @@ h3 {
 h3 > span {
   font-size: 30px;
 }
-.canciones--recomendadas-txt{
+.canciones--recomendadas-txt {
   margin: 42px 0px 10px 0px;
-  
 }
 p {
   color: rgb(255, 255, 255);
@@ -236,6 +283,7 @@ li > span {
   background-color: rgb(21, 22, 22);
   border-radius: 10px;
   margin-right: 1%;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 .container-cards {
@@ -368,7 +416,7 @@ li > span {
 }
 
 @media only screen and (max-width: 1239px) {
-  .canciones-destacadas{
+  .canciones-destacadas {
     vertical-align: 0;
   }
 }
@@ -387,12 +435,10 @@ li > span {
     padding: 10px;
     margin-top: -4px;
     width: 100%;
-    height: 300px;
+    height: 315px;
     background-color: rgb(21, 22, 22);
     overflow-y: scroll;
     z-index: 1;
-
-    
   }
 }
 
@@ -412,7 +458,6 @@ li > span {
   .container {
     margin: 0;
   }
-
 }
 
 @media only screen and (max-width: 577px) {
@@ -426,8 +471,8 @@ li > span {
   }
   .img {
     width: 200px;
+    height: 356px;
 
-    border-radius: 15px;
     text-align: center;
   }
 
@@ -435,7 +480,6 @@ li > span {
     width: 100%;
     text-align: center;
   }
-
 }
 
 @media only screen and (max-width: 499px) {
@@ -467,5 +511,4 @@ li > span {
   body {
     margin-top: 55px;
   }
-
 }
