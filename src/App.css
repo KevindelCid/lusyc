@@ -5,6 +5,7 @@
   --white-primary: rgb(235, 235, 235);
   --white-secundary: rgb(145, 145, 145);
   --gray-secundary: rgb(75, 75, 75);
+  --green-primary: rgba(2, 19, 19, 0.966);
 }
 
 * {
@@ -18,8 +19,9 @@ body {
   background-image: url("https://images.unsplash.com/photo-1528645602411-bbeb0d69a6de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWMlMjByb2NrfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 150px;
+  margin-bottom: 85px;
   color: var(--white-primary);
+  width: 100%;
 }
 
 .dib {
@@ -35,7 +37,7 @@ header {
 nav {
   width: 100%;
   box-shadow: 0 10px 20px rgb(26, 26, 26);
-  background-color: rgba(2, 19, 19, 0.966);
+  background-color: var(--green-primary);
   color: #ccc;
   position: sticky;
 }
@@ -415,6 +417,64 @@ li > span {
   font-weight: bold;
 }
 
+.login-base {
+  margin-top: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.login-container {
+  background-color: var(--gray-black-card);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 1rem;
+}
+.title-login {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.login {
+  padding: 20px 20px 80px 20px;
+}
+.login-form {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-text {
+  padding: 10px;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: 80%;
+  margin: 0px 0px 25px 0px;
+}
+form {
+  padding-top: 25px;
+}
+.btn {
+  padding: 15px;
+  border-radius: 0.5rem;
+}
+.btn-login {
+  background-color: var(--green-primary);
+  color: var(--white-primary);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+
+  border: solid 1px;
+  box-shadow: 0 10px 20px rgb(14, 14, 14);
+}
+
 @media only screen and (max-width: 1239px) {
   .canciones-destacadas {
     vertical-align: 0;
@@ -457,6 +517,14 @@ li > span {
   }
   .container {
     margin: 0;
+  }
+  .login-container {
+    flex-direction: column;
+  }
+  .login-base {
+    width: 100%;
+
+    margin-top: 120px;
   }
 }
 
