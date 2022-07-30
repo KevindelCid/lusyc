@@ -18,16 +18,24 @@ function Navbar(props) {
             </div>
 
             <ul id="options" className="options-navigation">
-              <Link to="/" className="link">
+              <Link to="/" onClick={functionsUi.hamMenu} className="link">
                 Home
               </Link>
-              <Link to="/playlists" className="link">
+              <Link
+                to="/playlists"
+                onClick={functionsUi.hamMenu}
+                className="link"
+              >
                 Playlists
               </Link>
-              <Link to="/localities" className="link">
+              <Link
+                to="/localities"
+                onClick={functionsUi.hamMenu}
+                className="link"
+              >
                 Localities
               </Link>
-              <Link to="/login" className="link">
+              <Link to="/login" onClick={functionsUi.hamMenu} className="link">
                 Login
               </Link>
               <Outlet />
