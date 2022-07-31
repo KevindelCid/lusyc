@@ -22,6 +22,7 @@ body {
   margin-bottom: 85px;
   color: var(--white-primary);
   width: 100%;
+  overflow: unset;
 }
 
 .dib {

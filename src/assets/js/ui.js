@@ -22,13 +22,17 @@ function hamMenu() {
 }
 
 function playerHidden() {
+  const player = document.getElementById("player");
+  const body = document.getElementById("body");
   if (playerH) {
-    const player = document.getElementById("player");
+    window.scrollTo(0, 0);
     player.style.display = "block";
+    body.style.overflow = "hidden";
     playerH = false;
   } else {
-    const player = document.getElementById("player");
     player.style.display = "none";
+    body.style.overflow = "overlay";
+
     playerH = true;
   }
 }
