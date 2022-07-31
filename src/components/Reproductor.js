@@ -1,5 +1,7 @@
 import React from "react";
 import functions from "../assets/js/reproductor";
+import Player from "./Player";
+import functionsUi from "../assets/js/ui";
 
 function Reproductor(props) {
   // let audio = new Audio(props.url)
@@ -28,43 +30,63 @@ function Reproductor(props) {
       </div> */}
 
       <div className="player-fix">
-        <img
-          id="imgPlayer"
-          className=""
-          src={props.image}
-          alt=""
-          width="80px"
-          height="80px"
-        ></img>
-        <div className="datos-reproduccion">
-          <h4 id="playerName" className="">
-            {props.name}
-          </h4>
-          <h5 id="songName" className="">
-            {props.cancion}
-          </h5>
+        <div
+          onClick={functionsUi.playerHidden}
+          className="player-fix-area pfai"
+        >
+          <img
+            id="imgPlayer"
+            className=""
+            src={props.image}
+            alt=""
+            width="80px"
+            height="80px"
+          ></img>
         </div>
 
-<div className="contenedor-botones-reproductor">
+        <div onClick={functionsUi.playerHidden} className="player-fix-area">
+          <div className="datos-reproduccion">
+            <h4 id="playerName" className="">
+              {props.name}
+            </h4>
+            <h5 id="songName" className="">
+              {props.cancion}
+            </h5>
+          </div>
+        </div>
+        <div className="player-fix-area-btn">
+          <div className="contenedor-botones-reproductor">
+            <button
+              id="btnRepeat"
+              className="btn-repeat color-disable"
+              onClick={functions.repeat}
+            >
+              ↺
+            </button>
 
-<button id="btnRepeat" className="btn-repeat color-disable"  onClick={functions.repeat}>↺</button>
+            <button
+              id="btn-rep"
+              className="btn-reproducir "
+              onClick={functions.play}
+            >
+              ▶︎
+            </button>
 
-  
-   <button
-          id="btn-rep"
-          className="btn-reproducir "
-          onClick={functions.play}
-        >
-          ▶︎
-        </button>
-
-        <button id="btnNext" className="btn-next color-enabled"  onClick={functions.next}>»</button>
-  
-</div>
-       
+            <button
+              id="btnNext"
+              className="btn-next color-enabled"
+              onClick={functions.next}
+            >
+              »
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div className="progress-bar dib"></div>
+      <div className="player" id="player">
+        {" "}
+        <Player />
+      </div>
     </>
   );
 }

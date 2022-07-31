@@ -1,4 +1,5 @@
 let navbarState = false;
+let playerH = true;
 
 function hamMenu() {
   let navbar = document.getElementById("options");
@@ -20,6 +21,17 @@ function hamMenu() {
   }
 }
 
-const functionsUi = { hamMenu };
+function playerHidden() {
+  if (playerH) {
+    const player = document.getElementById("player");
+    player.style.display = "block";
+    playerH = false;
+  } else {
+    const player = document.getElementById("player");
+    player.style.display = "none";
+    playerH = true;
+  }
+}
+const functionsUi = { hamMenu, playerHidden };
 
 export default functionsUi;

@@ -6,7 +6,6 @@ let reproduciendo = false;
 audio.loop = false;
 audio.controls = true;
 
-audio.volume = 0.5;
 let contador;
 
 let continuidadAudio = "next"; // next, repeat, stop
