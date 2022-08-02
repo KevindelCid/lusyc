@@ -6,17 +6,22 @@ let reproduciendo = false;
 audio.loop = false;
 audio.controls = true;
 
-let contador;
-
 let continuidadAudio = "next"; // next, repeat, stop
 
 function seTerminoLaCancion() {
-  console.log("se termino la cancionnn");
   if (continuidadAudio === "repeat") {
     audio.play();
   } else {
     next();
   }
+}
+
+function secondsToString(seconds) {
+  var minute = Math.floor((seconds / 60) % 60);
+  minute = minute < 10 ? "0" + minute : minute;
+  var second = seconds % 60;
+  second = second < 10 ? "0" + second : second;
+  return minute + ":" + second;
 }
 
 function play(tipoReproduccion) {
@@ -25,10 +30,27 @@ function play(tipoReproduccion) {
     console.log(audio.ended);
   };
 
+  audio.onplaying = () => {
+    const durationDomAudio = document.getElementById("ends");
+
+    durationDomAudio.textContent = secondsToString(Math.trunc(audio.duration));
+  };
+  audio.ontimeupdate = () => {
+    const barra = document.getElementById("barra");
+    const durationDomAudio = document.getElementById("starts");
+
+    durationDomAudio.textContent = secondsToString(
+      Math.trunc(audio.currentTime)
+    );
+    let reproducido =
+      Math.trunc((audio.currentTime * 100) / audio.duration) + "%";
+    barra.style.width = reproducido;
+  };
+
   if (!audio.ended) {
     console.log(audio.ended);
     let btn = document.getElementById("btn-rep");
-    if (reproduciendo === false) {
+    if (reproduciendo === false && tipoReproduccion !== "cosa") {
       audio.pause();
       audio.controls = true;
 
@@ -38,10 +60,20 @@ function play(tipoReproduccion) {
 
       reproduciendo = true;
       btn.textContent = "||";
-    } else {
+    } else if (reproduciendo === true && tipoReproduccion !== "cosa") {
       audio.pause();
       reproduciendo = false;
       btn.textContent = "▶︎";
+    } else if (tipoReproduccion === "cosa") {
+      audio.pause();
+      audio.controls = true;
+
+      audio.volume = 0.5;
+
+      audio.play();
+      tipoReproduccion = "";
+      reproduciendo = true;
+      btn.textContent = "||";
     }
   }
 }
@@ -89,6 +121,7 @@ function next() {
 
   audio.src = nextSong[ran].url;
   changeDataOfPlayer(nextSong[ran]);
+
   audio.play();
 }
 
@@ -115,14 +148,12 @@ function playCard(props) {
     reproduciendo = false;
     btn.textContent = "▶︎";
     audio = new Audio(props.url);
-    audio.loop = true;
+
     audio.controls = true;
 
     audio.volume = 0.5;
 
-    audio.play();
-    reproduciendo = true;
-    btn.textContent = "||";
+    play("cosa");
   } else if (continuidadAudio === "next") {
     let btn = document.getElementById("btn-rep");
     changeDataOfPlayer(props);
@@ -130,14 +161,12 @@ function playCard(props) {
     reproduciendo = false;
     btn.textContent = "▶︎";
     audio = new Audio(props.url);
-    audio.loop = true;
+
     audio.controls = true;
 
     audio.volume = 0.5;
 
-    audio.play();
-    reproduciendo = true;
-    btn.textContent = "||";
+    play("cosa");
   }
 }
 function changeDataOfPlayer(props) {

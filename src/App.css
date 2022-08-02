@@ -421,7 +421,7 @@ li > span {
 .close-player {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 70px;
   font-size: 2rem;
   background-color: transparent;
   border: none;
@@ -527,6 +527,76 @@ form {
   width: 50;
 }
 
+.barra-progreso {
+  position: fixed;
+  width: 100%;
+  bottom: 80px;
+}
+.datos-song {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.barra {
+  width: 95%;
+  height: 3px;
+  background-color: #ccc;
+  margin-left: auto;
+  margin-right: auto;
+}
+.barra-i {
+  width: 0%;
+  height: 100%;
+  height: 3px;
+  background-color: rgb(14, 163, 0);
+  margin-top: 1px !important;
+  padding-top: 1px;
+}
+
+.agrandar-reproductor {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
+.btn-reproductor-agrandado {
+  position: fixed;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  text-align: center;
+  padding-top: 205px;
+}
+
+.reproductor-vis {
+  display: block;
+}
+.reproductor-novis {
+  display: none;
+}
+
+.img-rep-agrandado {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 40px;
+}
+.player-fix-agrandado {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+}
+.datos-agrandado {
+  background-color: rgba(0, 0, 0, 0.74);
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media only screen and (max-width: 1239px) {
   .canciones-destacadas {
     vertical-align: 0;
